@@ -28,7 +28,7 @@ public class BallTracker : MonoBehaviour
         if (other.CompareTag("ball") && _gm != null)
         {
             float _yVelocity = other.GetComponent<Rigidbody>().velocity.y;
-            if (_yVelocity < -0.1)
+            if (_yVelocity < -0.01)
             {
                 Debug.Log("Ball Y velocity: " + _yVelocity);
                 _gm.Count++;
