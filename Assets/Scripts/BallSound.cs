@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class BallSound : MonoBehaviour
 {
+    private AudioSource audio;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        audio.Play();
     }
 }
